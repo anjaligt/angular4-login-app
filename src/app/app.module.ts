@@ -3,8 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { StorageServiceModule} from 'angular-webstorage-service';
-
+//import { StorageServiceModule} from 'angular-webstorage-service';
+import { Ng2Webstorage } from 'ngx-webstorage'; 
 
 // used to create fake backend
 import { AppComponent } from './app.component';
@@ -23,7 +23,7 @@ import { DashboardComponent } from './dashboard/index';
         HttpModule,
         HttpClientModule,
         routing,
-        StorageServiceModule
+        Ng2Webstorage
     ],
     declarations: [
         AppComponent,

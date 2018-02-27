@@ -3,6 +3,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Http } from '@angular/http';
 //import {LOCAL_STORAGE, WebStorageService} from 'angular-webstorage-service';
+import { LocalStorageService } from 'ngx-webstorage';
 
 @Component({
 	selector: 'dashboard',
@@ -15,14 +16,13 @@ export class DashboardComponent implements OnInit {
 	 UserData = {};
 	 public data:any=[];
 	 loginSessionKey = "";
+	 public session_data:any= [];
 	constructor(private route: ActivatedRoute,
-        private router: Router, private http: Http) { }
+        private router: Router, private http: Http, private session:LocalStorageService) { }
 	ngOnInit() {
 		this.loginSessionKey = localStorage.getItem("loginsessionkey");
-		this.UserData = JSON.parse(localStorage.getItem("UserData")); 
-		/*this.data[key]= this.storage.get(loginKey);
-    	console.log(this.data);*/
-		//this.UserDetail = JSON.parse(this.UserData);
-		console.log(this.UserData,'UserDetail123');
+		//this.UserData = JSON.parse(localStorage.getItem("UserData")); 
+		this.session_data = this.session.retrieve('session_data'); // retieving 
+		
 	}
 }
