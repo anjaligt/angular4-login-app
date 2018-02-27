@@ -1,8 +1,8 @@
-import { Component, OnInit, Input, Output } from '@angular/core';
+import { Component, OnInit, Input, Output, Injectable } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Http } from '@angular/http';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import {LOCAL_STORAGE, WebStorageService} from 'angular-webstorage-service';
+//import {LOCAL_STORAGE, WebStorageService} from 'angular-webstorage-service';
 
 
 @Component({
@@ -11,6 +11,7 @@ import {LOCAL_STORAGE, WebStorageService} from 'angular-webstorage-service';
     styleUrls: ['./home.component.css']
 })
 
+@Injectable()
 export class HomeComponent implements OnInit {
     model: any = {};
     post:any;                     // A property for our submitted form
@@ -18,8 +19,7 @@ export class HomeComponent implements OnInit {
     returnUrl: string;
     userDetail: {};
     constructor(private route: ActivatedRoute,
-        private router: Router, private http: Http,
-        private storage: WebStorageService) { }
+        private router: Router, private http: Http) { }
 
     
     ngOnInit() {
