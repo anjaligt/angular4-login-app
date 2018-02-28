@@ -32,7 +32,7 @@ export class HomeComponent implements OnInit {
         var data = {email: this.model.username, password: Md5.hashStr(this.model.password), device_type: 3};
         var modal = document.getElementById('id01');
         var config = { headers : {'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'}};
-        this.http.post("http://local.vsports.com/user/auth/login", data).subscribe(result => {
+        this.http.post("http://dev.vsports.com/user/auth/login", data).subscribe(result => {
          //this.ngOnInit();
          if(result)
          {
@@ -40,7 +40,7 @@ export class HomeComponent implements OnInit {
              localStorage.setItem("loginsessionkey", this.userDetail["data"].session_key);
              this.session.store('session_data', this.userDetail["data"].user_profile);//storing data in local storage service
              console.log(this.userDetail["data"].user_profile);
-          }
+        }
          modal.style.display = "none";
          this.router.navigate(['/dashboard']);
         }); 
