@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Http } from '@angular/http';
+import { NgForm } from '@angular/forms';
 //import {LOCAL_STORAGE, WebStorageService} from 'angular-webstorage-service';
 import { LocalStorageService } from 'ngx-webstorage';
 
@@ -24,5 +25,11 @@ export class DashboardComponent implements OnInit {
 		//this.UserData = JSON.parse(localStorage.getItem("UserData")); 
 		this.session_data = this.session.retrieve('session_data'); // retieving 
 		
+	}
+
+	updateProfile (myForm: NgForm) {
+	  console.log('Successful udpate');
+	  console.log(myForm.value);
+	  
 	}
 }
