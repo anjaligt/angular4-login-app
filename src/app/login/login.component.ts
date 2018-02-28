@@ -12,7 +12,8 @@ export class LoginComponent implements OnInit {
     model: any = {};
     post:any;                     // A property for our submitted form
     loading = false;
-    returnUrl: string;
+    //returnUrl: string;
+    responseData:any = {};
     constructor(private route: ActivatedRoute,
         private router: Router, private http: Http) { }
     
