@@ -37,10 +37,10 @@ export class HomeComponent implements OnInit {
          if(result)
          {
              this.userDetail = JSON.parse(result["_body"]);
-             localStorage.setItem("loginsessionkey", this.userDetail.data.session_key);
-             this.session.store('session_data', this.userDetail.data.user_profile);//storing data in local storage service
-                console.log(this.userDetail.data.user_profile);
-          }
+             localStorage.setItem("loginsessionkey", this.userDetail["data"].session_key);
+             this.session.store('session_data', this.userDetail["data"].user_profile);//storing data in local storage service
+             console.log(this.userDetail["data"].user_profile);
+        }
          modal.style.display = "none";
          this.router.navigate(['/dashboard']);
         }); 

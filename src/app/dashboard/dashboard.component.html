@@ -58,5 +58,19 @@ button:hover, a:hover {
  <p><button>Contact</button></p>
 </div>
 
+<form #myForm="ngForm" (ngSubmit)="updateProfile(myForm)">
+  <div>
+    <label>First Name</label>
+    <input type="text" name="first_name" ngModel required/>
+  </div>
+
+  <div>
+    <label>Last Name</label>
+    <input type="text" name="last_name" ngModel required/>
+  </div>
+
+  <button type="submit">Register</button>
+</form>
+
 </body>
 </html>
