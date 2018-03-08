@@ -14,6 +14,8 @@ import { HomeComponent } from './home/index';
 //import { LoginComponent } from './login/index';
 import { DashboardComponent } from './dashboard/index';
 
+import { EditprofileComponent } from './editprofile/index';
+
 
 
 @NgModule({
@@ -29,6 +31,7 @@ import { DashboardComponent } from './dashboard/index';
         AppComponent,
        	HomeComponent,
         DashboardComponent,
+        EditprofileComponent
     ],
     providers: [],
     bootstrap: [AppComponent]

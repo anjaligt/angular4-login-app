@@ -55,10 +55,10 @@ button:hover, a:hover {
     <a href="#"><i class="fa fa-linkedin"></i></a>  
     <a href="#"><i class="fa fa-facebook"></i></a> 
  </div>
- <p><button>Contact</button></p>
+ <p><button type="submit" [routerLink]="['/edit']">Edit</button></p>
 </div>
 
-<form #myForm="ngForm" (ngSubmit)="updateProfile(myForm)">
+<!-- <form #myForm="ngForm" (ngSubmit)="updateProfile(myForm)">
   <div>
     <label>First Name</label>
     <input type="text" name="first_name" ngModel required/>
@@ -69,8 +69,8 @@ button:hover, a:hover {
     <input type="text" name="last_name" ngModel required/>
   </div>
 
-  <button type="submit">Register</button>
-</form>
+  <button type="submit" [routerLink]="['/edit']">Register</button>
+</form> -->
 
 </body>
 </html>

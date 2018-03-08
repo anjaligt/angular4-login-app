@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
         this.loading = true;
         var data = {email: this.model.username, password: this.model.password, device_type: 3};
         var config = { headers : {'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'}};
-        this.http.post("http://dev.vsports.com/user/auth/login", data).subscribe(result => {
+        this.http.post("http://local.vsports.com/user/auth/login", data).subscribe(result => {
             console.log(result);
             this.responseData = result;
          this.ngOnInit();
