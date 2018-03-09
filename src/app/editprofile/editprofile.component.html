@@ -28,11 +28,11 @@
         </div>
         <h3>Personal info</h3>
         
-        <form class="form-horizontal" role="form">
+        <form class="form-horizontal" role="form" (ngSubmit)=" updateProfile()">
           <div class="form-group">
             <label class="col-lg-3 control-label">First name:</label>
             <div class="col-lg-8">
-              <input class="form-control" type="text" value="{{session_data.first_name}}">
+              <input class="form-control" type="text" name="firstname" value="{{session_data.first_name}}">
             </div>
           </div>
           <div class="form-group">
