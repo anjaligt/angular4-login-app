@@ -2,6 +2,8 @@
 
 <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
 
+<button [routerLink]="['/register']" style="width:auto;">SignUp</button>
+
 <div id="id01" class="modal">
   <form name="form" class="modal-content animate" (ngSubmit)="f.form.valid && login()" #f="ngForm" novalidate>
 

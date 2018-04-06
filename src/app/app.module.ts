@@ -15,6 +15,7 @@ import { HomeComponent } from './home/index';
 import { DashboardComponent } from './dashboard/index';
 
 import { EditprofileComponent } from './editprofile/index';
+import { RegisteruserComponent } from './registeruser/registeruser.component';
 
 
 
@@ -31,7 +32,8 @@ import { EditprofileComponent } from './editprofile/index';
         AppComponent,
        	HomeComponent,
         DashboardComponent,
-        EditprofileComponent
+        EditprofileComponent,
+        RegisteruserComponent
     ],
     providers: [],
     bootstrap: [AppComponent]

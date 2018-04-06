@@ -33,4 +33,10 @@ export class LoginComponent implements OnInit {
          this.ngOnInit();
         }); 
     }
+
+    registerUser() {
+        this.loading = true;
+        var data = {email: this.model.email, password: this.model.password, firstName: this.model.firstName, lastName: this.model.lastName}
+        
+    }
 }

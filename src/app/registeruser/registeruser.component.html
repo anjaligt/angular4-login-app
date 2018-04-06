@@ -1,0 +1,29 @@
+<form (ngSubmit)="register()" style="border:1px solid #ccc">
+  <div class="container">
+    <h1>Sign Up</h1>
+    <p>Please fill in this form to create an account.</p>
+    <hr>
+
+    <label for="FirstName"><b>FirstName</b></label>
+    <input type="text" autocomplete="off" placeholder="Enter FirstName" name="fisrtName" [(ngModel)]="model.firstName" #firstName="ngModel" required>
+
+    <label for="LastName"><b>LastName</b></label>
+    <input type="text" autocomplete="off" placeholder="Enter LastName" name="lastName" [(ngModel)]="model.lastName" #lastName="ngModel" required>
+
+    <label for="UserName"><b>UserName</b></label>
+    <input type="text" autocomplete="off" placeholder="Enter Username" name="userName" [(ngModel)]="model.userName" #userName="ngModel" required>
+
+    <label for="Email"><b>Email</b></label>
+    <input type="text" autocomplete="off" placeholder="Enter Email" name="email" [(ngModel)]="model.email" #email="ngModel" required>
+
+    <label for="Password"><b>Password</b></label>
+    <input type="password" autocomplete="off" placeholder="Enter Password" name="password" [(ngModel)]="model.password" #password="ngModel" required>
+
+    <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+    <div class="clearfix">
+      <button type="button" class="cancelbtn">Cancel</button>
+      <button type="submit" class="signupbtn">Sign Up</button>
+    </div>
+  </div>
+</form>

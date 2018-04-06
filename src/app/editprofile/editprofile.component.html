@@ -28,23 +28,24 @@
         </div>
         <h3>Personal info</h3>
         
-        <form class="form-horizontal" role="form" (ngSubmit)=" updateProfile()">
+        <form class="form-horizontal" role="form" (ngSubmit)="updateProfile()">
           <div class="form-group">
             <label class="col-lg-3 control-label">First name:</label>
             <div class="col-lg-8">
-              <input class="form-control" type="text" name="firstname" value="{{session_data.first_name}}">
+              <!-- <input class="form-control" type="text" name="firstname" [(ngModel)]="session_data.first_name" #username="ngModel" > -->
+              <input type="text" class="form-control" name="firstname" [(ngModel)]="session_data.firstName" #firstname="ngModel" required />
             </div>
           </div>
           <div class="form-group">
             <label class="col-lg-3 control-label">Last name:</label>
             <div class="col-lg-8">
-              <input class="form-control" type="text" value="{{session_data.last_name}}">
+              <input class="form-control" type="text" name="lastname" [(ngModel)]="session_data.lastName" #lastname="ngModel" required>
             </div>
           </div>
           <div class="form-group">
             <label class="col-lg-3 control-label">Email:</label>
             <div class="col-lg-8">
-              <input class="form-control" type="text" value="{{session_data.email}}">
+              <input class="form-control" type="text" name="email" [(ngModel)]="session_data.email" #email="ngModel">
             </div>
           </div>
         <!--   <div class="form-group">
@@ -67,7 +68,7 @@
           <div class="form-group">
             <label class="col-md-3 control-label">Username:</label>
             <div class="col-md-8">
-              <input class="form-control" type="text" value="{{session_data.user_name}}">
+              <input class="form-control" type="text" name="userName" [(ngModel)]="session_data.userName" #username="ngModel">
             </div>
           </div>
           <!-- <div class="form-group">
@@ -85,7 +86,8 @@
           <div class="form-group">
             <label class="col-md-3 control-label"></label>
             <div class="col-md-8">
-              <input type="button" class="btn btn-primary" value="Save Changes">
+              <!-- <input type="button" class="btn btn-primary" value="Save Changes"> -->
+              <button type="submit" class="btn btn-primary">Save Changes</button>
               <span></span>
               <input type="reset" class="btn btn-default" value="Cancel">
             </div>

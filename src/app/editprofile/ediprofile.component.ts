@@ -10,6 +10,7 @@ import {Md5} from 'ts-md5/dist/md5';
     styleUrls: ['./editprofile.component.css']
 })
 export class EditprofileComponent {
+    model: any = {};
  
     public input: any;
     public session_data:any= [];
@@ -24,22 +25,23 @@ export class EditprofileComponent {
     }
     ngOnInit(){
         this.session_data = this.session.retrieve('session_data');
+        console.log(this.session_data.first_name + 'test session data');
     }
  
     updateProfile() {
-        alert('as');
-        console.log(this.input.first_name);
+        console.log(this.session_data.first_name, this.session_data.last_name, this.session_data.email, this.session_data.user_name);
         if(this.input.email && this.input.password) {
+            
             var data = {};
+
             let headers = new Headers({ "content-type": "application/json" });
             let options = new RequestOptions({ headers: headers });
-            
             //this.http.post("http://localhost:3000/account", JSON.stringify(this.input), options)
               //  .map(result => result.json())
-              this.http.post("http://local.vsports.com/user/my_profile/update_profile", data)
+              /*this.http.post("http://local.vsports.com/user/my_profile/update_profile", data)
                 .subscribe(result => {
                     this.router.navigate(["/login"]);
-               });
+               });*/
         }
     }
  

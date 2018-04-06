@@ -46,7 +46,7 @@ button:hover, a:hover {
 
 <div class="card">
   <img src="{{session_data.image}}" style="width:100%">
-  <h1>{{session_data.first_name}}</h1>
+  <h1>{{session_data.userName}}</h1>
   <p class="title">{{session_data.email}}</p>
   <p>{{session_data.user_name}}</p>
   <div style="margin: 24px 0;">
@@ -57,20 +57,6 @@ button:hover, a:hover {
  </div>
  <p><button type="submit" [routerLink]="['/edit']">Edit</button></p>
 </div>
-
-<!-- <form #myForm="ngForm" (ngSubmit)="updateProfile(myForm)">
-  <div>
-    <label>First Name</label>
-    <input type="text" name="first_name" ngModel required/>
-  </div>
-
-  <div>
-    <label>Last Name</label>
-    <input type="text" name="last_name" ngModel required/>
-  </div>
-
-  <button type="submit" [routerLink]="['/edit']">Register</button>
-</form> -->
 
 </body>
 </html>
